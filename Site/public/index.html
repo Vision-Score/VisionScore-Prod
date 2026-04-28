@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Score</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back_ios,arrow_forward_ios" />
+  <link rel="icon" href="./assets/imgs/logo_branca.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="main">
+
+    <div class="navbar">
+      <div class="logo">
+        <img src="./assets/logo_branca.png" alt="Logo">
+      </div>
+
+      <div class="nav-links">
+        <a href="#home">HOME</a>
+        <a href="#servicos">SERVIÇOS</a>
+        <a href="#sobre">SOBRE</a>
+        <a href="#contato">CONTATO</a>
+      </div>
+
+      <div class="login" href="./login.html">
+        <a href="./login.html">LOGIN</a>
+      </div>
+    </div>
+
+    <div class="banner cta" id="home">
+      <div class="textoCta">
+        <h1>VISION SCORE</h1>
+        <p>ACELERE E OTIMIZE SUAS ANÁLISES</p>
+      </div>
+    </div>
+
+    <div class="banner promo" id="servicos">
+      <span>ACESSE INFORMAÇÕES DETALHADAS SOBRE</span>
+
+      <div class="promoContainer">
+        <div class="botao" onclick="changeInfo(0)">
+          <span class="material-symbols-outlined">
+            arrow_back_ios
+          </span>
+        </div>
+        <div class="carrosselPromo">
+          <div class="cardCarrossel">
+            <div class="tagCard">SUA EQUIPE</div>
+            <img src="./assets/Acquisition_range.png" alt="" class="icon">
+            <div class="tituloCard">PERFORMANCE</div>
+            <div class="descricaoCard">Tenha acesso à análise detalhada do desempenho individual dos jogadores: <b>Dano</b>, <b>Healing</b>, <b>CS/min</b> e outras métricas importantes.</div>
+            <div class="metricaCard">+ DE <b>50</b> PARAMETROS ANALISADOS</div>
+          </div>
+          <div class="cardCarrossel">
+            <div class="tagCard">SUA EQUIPE</div>
+            <img src="./assets/Ranged_icon.png" alt="" class="icon">
+            <div class="tituloCard">DESEMPENHO</div>
+            <div class="descricaoCard">Compare o <b>desempenho</b> de seus jogadores em relação às outras equipes, em <b>diversas métricas</b>, com um clique.</div>
+            <div class="metricaCard"><b>DADOS</b> DE DIVERSOS CAMPEONATOS</div>
+          </div>
+          <div class="cardCarrossel">
+            <div class="tagCard">SUA EQUIPE</div>
+            <img src="./assets/Summoner_spell_icon.png" alt="" class="icon">
+            <div class="tituloCard">ESTRATÉGIA</div>
+            <div class="descricaoCard">Analise suas tendências e estratégias e como se comparam com o que está dominando a cena de League of Legends.</div>
+            <div class="metricaCard">INFORMAÇÕES DE <b>TODOS OS TIMES</b> ATIVOS</div>
+          </div>
+        </div>
+        <div class="botao" onclick="changeInfo(1)">
+          <span class="material-symbols-outlined">
+            arrow_forward_ios
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="saibaMais" id="sobre">
+      <div class="imgSaibaMais">
+        <img src="./assets/akali-promo.png" alt="Imagem Saiba Mais">
+      </div>
+      <div class="textoSaibaMais">
+        <h1>SOBRE A VISION SCORE</h1>
+        <p>Nossa plataforma centraliza e organiza as principais informações de jogo dos jogadores profissionais de
+          League of Legends, reunindo históricos de partidas, padrões de desempenho, estatísticas individuais e
+          coletivas, além de dados estratégicos tanto da sua equipe quanto dos adversários.
+
+          Os dados estão dispersos em diferentes fontes, exigindo horas de pesquisa manual e análise fragmentada. Isso
+          gera desgaste e reduz o tempo disponível para a preparação estratégica e tomada de decisão. </p>
+        <div class="btn">
+          <a class="btn_dentro">SAIBA MAIS</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contato" id="contato">
+      <div class="faleConosco">
+        ENTRE EM CONTATO
+        <div class="faleConoscoUpper">
+          <input type="text" placeholder="Nome">
+          <input type="text" placeholder="Equipe">
+          <input type="text" placeholder="Email">
+          <input type="text" placeholder="Telefone">
+        </div>
+        <div class="faleConoscoBottom">
+          <textarea class="mensagem" placeholder="Mensagem"></textarea>
+          <div class="btn">
+            <a class="btn_dentro">ENVIAR</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer">s
+      <div class="copy">
+        &copy; 2026 Vision Score. Todos os direitos reservados.
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
+
+<script>
+
+  const infos = [`<div class="cardCarrossel">
+            <div class="tagCard">SUA EQUIPE</div>
+            <img src="./assets/Acquisition_range.png" alt="" class="icon">
+            <div class="tituloCard">PERFORMANCE</div>
+            <div class="descricaoCard">Tenha acesso à análise detalhada do desempenho individual dos jogadores: <b>Dano</b>, <b>Healing</b>, <b>CS/min</b> e outras métricas importantes.</div>
+            <div class="metricaCard">+ DE <b>50</b> PARAMETROS ANALISADOS</div>
+          </div>
+          <div class="cardCarrossel">
+            <div class="tagCard">SUA EQUIPE</div>
+            <img src="./assets/Ranged_icon.png" alt="" class="icon">
+            <div class="tituloCard">DESEMPENHO</div>
+            <div class="descricaoCard">Compare o <b>desempenho</b> de seus jogadores em relação às outras equipes, em <b>diversas métricas</b>, com um clique.</div>
+            <div class="metricaCard"><b>DADOS</b> DE DIVERSOS CAMPEONATOS</div>
+          </div>
+          <div class="cardCarrossel">
+            <div class="tagCard">SUA EQUIPE</div>
+            <img src="./assets/Summoner_spell_icon.png" alt="" class="icon">
+            <div class="tituloCard">ESTRATÉGIA</div>
+            <div class="descricaoCard">Analise suas tendências e estratégias e como se comparam com o que está dominando a cena de League of Legends.</div>
+            <div class="metricaCard">INFORMAÇÕES DE <b>TODOS OS TIMES</b> ATIVOS</div>
+          </div>`,
+    `<div class="cardCarrossel">
+            <div class="tagCard">SEU ADVERSÁRIO</div>
+            <img src="./assets/TFT_Hybrid_Fighter.png" alt="" class="icon">
+            <div class="tituloCard">TENDÊNCIAS INDIVIDUAIS</div>
+            <div class="descricaoCard">Acesse com apenas um clique um <B>relatório detalhado</B> sobre as tendências
+              individuais dos jogadores. <b>Descubra como eles jogam</b>.</div>
+            <div class="metricaCard">+ DE <b>50</b> JOGADORES ANALISADOS</div>
+          </div>
+          <div class="cardCarrossel">
+            <div class="tagCard">SEU ADVERSÁRIO</div>
+            <img src="./assets/Selection_radius.png" alt="" class="icon">
+            <div class="tituloCard">ANÁLISE DE PLAYSTYLE</div>
+            <div class="descricaoCard">Obtenha <b>insights valiosos</b> sobre as estratégias e estilos de jogo das
+              equipes adversárias e como se posicionam em diferentes cenários de jogo, reduzindo o esforço de scouting.
+            </div>
+            <div class="metricaCard"><b>DADOS</b> ATUALIZADOS MENSALMENTE</div>
+          </div>
+          <div class="cardCarrossel">
+            <div class="tagCard">SEU ADVERSÁRIO</div>
+            <img src="./assets/Damage_rating.png" alt="" class="icon">
+            <div class="tituloCard">HISTÓRICO RECENTE</div>
+            <div class="descricaoCard">Tenha acesso ao <b>histórico de partidas recentes</b> dos seus oponentes e descubra como eles estão jogando, como responder e o que priorizar na sua preparação.</div>
+            <div class="metricaCard">ANÁLISE DE <B>TODOS</B> OS CAMPEONATOS OFICIAIS</div>
+          </div>`
+  ];
+
+  let currentIndex = 0;
+
+  function changeInfo() {
+    const carrossel = document.querySelector('.carrosselPromo');
+    carrossel.innerHTML = infos[++currentIndex % infos.length];
+    currentIndex = currentIndex % infos.length;
+  }
+
+</script>
